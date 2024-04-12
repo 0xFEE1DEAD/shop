@@ -1,0 +1,8 @@
+{
+    "name": "Laravel-shop-dev",
+    "service": "nginx-unit",
+    "remoteUser": "shop-user",
+    "shutdownAction": "stopCompose",
+    "workspaceFolder": "/app",
+    "dockerComposeFile": "docker-compose.yml"
+}

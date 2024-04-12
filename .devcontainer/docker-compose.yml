@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  nginx-unit:
+    build:
+      context: ./nunit
+      args:
+        USERID: 197610
+        GROUPID: 197121
+    ports:
+      - 8888:80
+    volumes:
+      - ..:/app
+
+  database:
+    image: postgres:16
+    restart: always
+    environment:
+      POSTGRES_DB: shop
+      POSTGRES_USER: shop
+      POSTGRES_PASSWORD: shop-user-password-321
+    volumes:
+      - /var/lib/postgresql/data
