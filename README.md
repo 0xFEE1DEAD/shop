@@ -37,6 +37,6 @@ composer install
 echo 'APP_KEY=' > .env
 php artisan key:generate
 php artisan migrate
-php artisan db:seed
 php artisan test
+php artisan db:seed
 ```
