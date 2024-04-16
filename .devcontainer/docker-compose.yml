@@ -11,6 +11,39 @@ services:
       - 8888:80
     volumes:
       - ..:/app
+    environment:
+      APP_NAME: Shop
+      APP_ENV: local
+      APP_DEBUG: true
+      APP_TIMEZONE: UTC
+      APP_URL: http://localhost
+
+      APP_LOCALE: ru
+      APP_FALLBACK_LOCALE: ru
+      APP_FAKER_LOCALE: ru_RU
+
+      APP_MAINTENANCE_DRIVER: file
+      APP_MAINTENANCE_STORE: database
+
+      DB_CONNECTION: pgsql
+      DB_HOST: database
+      DB_PORT: 5432
+      DB_DATABASE: shop
+      DB_USERNAME: shop
+      DB_PASSWORD: shop-user-password-321
+
+      SESSION_DRIVER: database
+      SESSION_LIFETIME: 120
+      SESSION_ENCRYPT: false
+      SESSION_PATH: /
+      SESSION_DOMAIN: null
+
+      BROADCAST_CONNECTION: log
+      FILESYSTEM_DISK: local
+      QUEUE_CONNECTION: database
+
+      CACHE_STORE: database
+      CACHE_PREFIX: ''
 
   database:
     image: postgres:16
