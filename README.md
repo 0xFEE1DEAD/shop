@@ -40,3 +40,4 @@ php artisan migrate
 php artisan test
 php artisan db:seed
 ```
+App will become available on port 8888
