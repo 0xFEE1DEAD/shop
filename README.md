@@ -29,3 +29,14 @@ You can knows userid and groupid by command
 ```bash
 id
 ```
+
+For installing app
+```bash
+docker exec -u 197610 -it devcontainer-nginx-unit-1 /bin/bash
+composer install
+echo 'APP_KEY=' > .env
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
+php artisan test
+```
